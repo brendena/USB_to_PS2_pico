@@ -1,4 +1,4 @@
-# PS2 to USB on pico
+# USB to PS2 on pico
 
 ## Good references
 * https://github.com/Harvie/ps2dev/blob/master/src/ps2dev.cpp
