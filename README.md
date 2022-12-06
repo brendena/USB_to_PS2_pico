@@ -1,4 +1,4 @@
-# PS2_Device
+# PS2 to USB on pico
 
 ## Good references
 * https://github.com/Harvie/ps2dev/blob/master/src/ps2dev.cpp
@@ -7,4 +7,4 @@
 * mkdir build
 * cd build
 * cmake ..
-* openocd -f interface/picoprobe.cfg -f target/rp2040.cfg -c "program RaspberryShifter.elf verify reset exit"
+* openocd -f interface/picoprobe.cfg -f target/rp2040.cfg -c "program USB_TO_PS2_PICO.elf verify reset exit"
