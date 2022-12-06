@@ -1,0 +1,6 @@
+[submodule "PS2_device_lib"]
+	path = PS2_device_lib
+	url = https://github.com/brendena/PS2_device_lib
+[submodule "atkPico"]
+	path = atkPico
+	url = https://github.com/brendena/atkPico
