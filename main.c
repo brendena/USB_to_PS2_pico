@@ -24,10 +24,9 @@ int main(void)
 {
   board_init();
 
-  printf("[USB to PS2]\r\n");
-  ps2_keyboard_device_init(0,14);
-  //ps2_mouse_device_init(0,14);
-  //sleep_ms(100000); //let the ps2 devices init
+  printf("\n\n\n\n[USB to PS2]\r\n");
+  ps2_keyboard_device_init(0,16);
+  ps2_mouse_device_init(0,14);
 
   tusb_init();
 
@@ -37,7 +36,7 @@ int main(void)
     tuh_task();
     led_blinking_task();
     hid_keyboard_app_task();
-    //hid_mouse_app_task();
+    hid_mouse_app_task();
   }
   //*/
 
@@ -142,7 +141,6 @@ void hid_keyboard_app_task(void)
     //handle modifiers
     if(keyboardState.input.modifier != prev_report.modifier)
     {
-      printf("got here\n");
       const usb_2_ps2_modifiers[8]     = {0x14,0x12,0x11,0x1f,0x14,0x59,0x11,0x27};
       const usb_2_ps2_ext_modifiers[8] = {0x0 , 0x0, 0x0, 0x1, 0x1, 0x0, 0x1,0x1 };  
 
